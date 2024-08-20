@@ -4,7 +4,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import ua.pp.hophey.parser.LinksParser;
-import ua.pp.hophey.webdriver.WebDriverManager;
 
 import java.util.ArrayList;
 import java.util.List;

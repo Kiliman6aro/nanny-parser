@@ -21,7 +21,7 @@ public class NannyParserApplication {
         for(String link: pagesLinks){
             profilesLinks.addAll(profilesLinksParser.parse(link));
         }
-        System.out.println("Общее количество анкет: "+profilesLinks.size());
+        System.out.println("Total count profiles: "+profilesLinks.size());
         LinksRepository repository = new LinksRepository();
         repository.saveAll(profilesLinks);
 

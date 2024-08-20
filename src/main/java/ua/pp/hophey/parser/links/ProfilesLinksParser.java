@@ -20,6 +20,7 @@ public class ProfilesLinksParser implements LinksParser {
 
     @Override
     public List<String> parse(String url) {
+        webDriver.get(url);
         List<WebElement> elements = webDriver.findElements(By.cssSelector("a.N_short_Name"));
         for (WebElement link: elements){
             profilesLinks.add(link.getAttribute("href"));

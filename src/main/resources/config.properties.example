@@ -1,0 +1,4 @@
+app.name=NannyParser
+
+parser.webdriver=drivers/chromedriver.exe
+parser.searchurl=http://www.nashanyanya.com.ua/NannySearch.asp?SEARCH_JOB=1000&SEARCH_CITYID=&SEARCH_CITYREGION_ID=&findnow=%CD%E0%E9%F2%E8&LIVEIN_MILES=&LIVEINOUT=&JOBSTATUS=&LANGID=&AGERANGE=&EXPYEARS=&LASTLOGIN=&AdvancedSearch=1

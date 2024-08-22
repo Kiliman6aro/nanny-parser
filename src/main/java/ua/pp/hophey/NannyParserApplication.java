@@ -8,11 +8,12 @@ import ua.pp.hophey.services.ProfileLinksParserService;
 import ua.pp.hophey.services.ProfileLinksService;
 import ua.pp.hophey.webdriver.ChromeWebDriverManager;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class NannyParserApplication {
     public static void main(String[] args) {
+
+
         LinksRepository repository = new LinksRepository();
         ChromeWebDriverManager webDriverManager = new ChromeWebDriverManager();
         ProfileLinksService service = new ProfileLinksParserServiceProxy(

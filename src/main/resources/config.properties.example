@@ -2,3 +2,6 @@ app.name=NannyParser
 
 parser.webdriver=drivers/chromedriver.exe
 parser.searchurl=http://www.nashanyanya.com.ua/NannySearch.asp?SEARCH_JOB=1000&SEARCH_CITYID=&SEARCH_CITYREGION_ID=&findnow=%CD%E0%E9%F2%E8&LIVEIN_MILES=&LIVEINOUT=&JOBSTATUS=&LANGID=&AGERANGE=&EXPYEARS=&LASTLOGIN=&AdvancedSearch=1
+parser.page.selector.pagination=#table29 > tbody > tr:nth-child(7) > td > table > tbody > tr > td:nth-child(2)
+parser.page.selector.profile=a.N_short_Name
+parser.page.link.template=http://www.nashanyanya.com.ua/NannySearch.asp?PAGENUMBER={pageNumber}&BACKSEARCH=1&LIVEIN_MILES=&LIVEINOUT=&JOBSTATUS=&SEARCH_JOB=1000&LANGID=&AGERANGE=&LASTLOGIN=&EXPYEARS=&AdvancedSearch=1&SEARCH_CITYREGION_ID=&SEARCH_CITYID=&ORDERBY=LASTLOGIN&SORTORDER=DESC

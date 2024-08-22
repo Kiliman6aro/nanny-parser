@@ -23,12 +23,12 @@ public class PagesLinksParser implements LinksParser {
     public List<String> parse(String url) {
         WebDriver webDriver = webDriverManager.getWebDriver();
         webDriver.get(url);
-        WebElement linksContainer = webDriver.findElement(By.cssSelector("#table29 > tbody > tr:nth-child(7) > td > table > tbody > tr > td:nth-child(2)"));
+        WebElement linksContainer = webDriver.findElement(By.cssSelector(ConfigLoader.getProperty("parser.page.selector.pagination")));
         List<WebElement> links = linksContainer.findElements(By.tagName("a"));
         WebElement lastLink = links.get(links.size() - 1);
         var lastPage = Long.parseLong(lastLink.getText());
         for (int i = 1; i <= lastPage; i++){
-            String pageLinkTemplate = "http://www.nashanyanya.com.ua/NannySearch.asp?PAGENUMBER={pageNumber}&BACKSEARCH=1&LIVEIN_MILES=&LIVEINOUT=&JOBSTATUS=&SEARCH_JOB=1000&LANGID=&AGERANGE=&LASTLOGIN=&EXPYEARS=&AdvancedSearch=1&SEARCH_CITYREGION_ID=&SEARCH_CITYID=&ORDERBY=LASTLOGIN&SORTORDER=DESC";
+            String pageLinkTemplate = ConfigLoader.getProperty("parser.page.link.template");
             pagesLinks.add(pageLinkTemplate.replace("{pageNumber}", String.valueOf(i)));
         }
         return pagesLinks;

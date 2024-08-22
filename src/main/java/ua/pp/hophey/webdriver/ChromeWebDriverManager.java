@@ -20,7 +20,9 @@ public class ChromeWebDriverManager implements WebDriverManager{
 
     @Override
     public WebDriver getWebDriver() {
-        driver = new ChromeDriver();
+        if(driver == null){
+            driver = new ChromeDriver();
+        }
         return driver;
     }
 

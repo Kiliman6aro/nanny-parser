@@ -24,7 +24,7 @@ public class PageParser implements LinksParser {
     public List<String> parse(String url) {
         WebDriver webDriver = webDriverManager.getWebDriver();
         webDriver.get(url);
-        List<WebElement> elements = webDriver.findElements(By.cssSelector("a.N_short_Name"));
+        List<WebElement> elements = webDriver.findElements(By.cssSelector(ConfigLoader.getProperty("parser.page.selector.profile")));
         for (WebElement link: elements){
             profilesLinks.add(link.getAttribute("href"));
         }

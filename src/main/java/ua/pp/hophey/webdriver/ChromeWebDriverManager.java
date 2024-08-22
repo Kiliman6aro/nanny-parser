@@ -16,11 +16,11 @@ public class ChromeWebDriverManager implements WebDriverManager{
             throw new RuntimeException("Вы должны скачать Chrome Driver: https://googlechromelabs.github.io/chrome-for-testing/");
         }
         System.setProperty("webdriver.chrome.driver", "drivers/chromedriver.exe");
-        driver = new ChromeDriver();
     }
 
     @Override
     public WebDriver getWebDriver() {
+        driver = new ChromeDriver();
         return driver;
     }
 

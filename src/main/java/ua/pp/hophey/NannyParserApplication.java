@@ -4,6 +4,7 @@ import ua.pp.hophey.parser.links.PageParser;
 import ua.pp.hophey.parser.links.PagesLinksParser;
 import ua.pp.hophey.proxy.ProfileLinksParserServiceProxy;
 import ua.pp.hophey.repositories.LinksRepository;
+import ua.pp.hophey.services.LoginService;
 import ua.pp.hophey.services.ProfileLinksParserService;
 import ua.pp.hophey.services.ProfileLinksService;
 import ua.pp.hophey.webdriver.ChromeWebDriverManager;
@@ -27,6 +28,8 @@ public class NannyParserApplication {
 
         List<String> profileLinks = service.getProfilesLinks();
         System.out.println("Total count profiles: "+profileLinks.size());
-        webDriverManager.closeWebDriver();
+        LoginService loginService = new LoginService(ConfigLoader.getProperty("parser.auth.page"), webDriverManager);
+        loginService.login(ConfigLoader.getProperty("parser.auth.username"), ConfigLoader.getProperty("parser.auth.password"));
+//        webDriverManager.closeWebDriver();
     }
 }

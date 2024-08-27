@@ -14,7 +14,7 @@ public class PagesLinksParser implements LinksParser {
 
     private final WebDriverManager webDriverManager;
 
-    private List<String> pagesLinks = new ArrayList<>();
+    private final List<String> pagesLinks = new ArrayList<>();
 
     public PagesLinksParser(WebDriverManager webDriverManager) {
         this.webDriverManager = webDriverManager;

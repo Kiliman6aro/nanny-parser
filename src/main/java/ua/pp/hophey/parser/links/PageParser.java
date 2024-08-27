@@ -13,7 +13,7 @@ import java.util.List;
 public class PageParser implements LinksParser {
     private final WebDriverManager webDriverManager;
 
-    private List<String> profilesLinks = new ArrayList<>();
+    private final List<String> profilesLinks = new ArrayList<>();
 
     public PageParser(WebDriverManager webDriverManager) {
 
